@@ -37,6 +37,14 @@ VALUES					(1, 'DeuBug', 100, 80, (convert(datetime,'03-03-21 08:51:00 AM',5)),(
 						,(4, 'BitBug', 70, 100, (convert(datetime,'03-03-21 08:51:00 AM',5)),(convert(datetime,'17-03-16 10:34:09 PM',5)))
 						,(7, 'Fer8', 75, 60, (convert(datetime,'03-03-21 08:51:00 AM',5)),(convert(datetime,'18-03-18 10:34:09 PM',5)));
 						
+
+INSERT INTO TipoDeUsuario (NomeTipoUsuario)
+VALUES					  ('Jogador')
+						  ,('Administrador');
+
+INSERT INTO Usuario (idTipoDeUsuario, email, senha)
+VALUES				(2, 'admin@gmail.com', 'admin123')
+					,(1, 'jogador@gmail.com', 'jogador123');
 --------------------------------------------------------------------------------------------------------------------------------------------------
 --4. Atualizar o nome do personagem Fer8 para Fer7;
 UPDATE Personagens

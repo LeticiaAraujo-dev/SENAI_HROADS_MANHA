@@ -34,12 +34,12 @@ SELECT * FROM TipoHabilidade
 SELECT NomeHabilidade AS Habilidades , NomeTipo AS 'Tipos de Habilidade'  FROM Habilidade
 INNER JOIN TipoHabilidade
 ON Habilidade.idTipoHabilidade = TipoHabilidade.idTipoHabilidade
-
 ----------------------------------------------------------------------------------------------------
 --14. Selecionar todos os personagens e suas respectivas classes;
 SELECT NomePersonagem AS Personagem, NomeClasse AS Classe FROM Personagens
 INNER JOIN Classe 
 ON Personagens.idClasse = Classe.idClasse
+
 
 ----------------------------------------------------------------------------------------------------
 --15. Selecionar todos os personagens e as classes (mesmo que elas não tenham correspondência em personagens);
@@ -72,3 +72,9 @@ RIGHT JOIN Habilidade
 ON ClasseHabilidade.IdHabilidade = Habilidade.IdHabilidade
 
 ----------------------------------------------------------------------------------------------------
+
+SELECT * FROM TipoDeUsuario
+SELECT * FROM Usuario
+
+
+

@@ -19,7 +19,7 @@ CREATE TABLE Habilidade(
 
 CREATE TABLE Classe (
 	idClasse			INT PRIMARY KEY IDENTITY
-	,NomeClasse			VARCHAR(200) NOT NULL
+	,NomeClasse			VARCHAR(200) NOT NULL 
 );
 
 CREATE TABLE ClasseHabilidade (
@@ -36,4 +36,17 @@ CREATE TABLE Personagens (
 	,DataCriacao		DATETIME
 	,DataAtualizacao	DATETIME
 );
+
+CREATE TABLE TipoDeUsuario (
+	idTipoDeUsuario		INT PRIMARY KEY IDENTITY
+	,NomeTipoUsuario	VARCHAR(200) NOT NULL UNIQUE
+);
+
+CREATE TABLE Usuario (
+	idUsuario			INT PRIMARY KEY IDENTITY
+	,idTipoDeUsuario	INT FOREIGN KEY REFERENCES TipoDeUsuario (idTipoDeUsuario)
+	,email				VARCHAR(200) NOT NULL
+	,senha				VARCHAR(200) NOT NULL
+);
 ----------------------------------------------------------------------------------------------------
+
